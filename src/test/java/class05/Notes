@@ -1,0 +1,52 @@
+DropDown:
+
+does it have a select tag?   <Select>
+ if yes - use Select class in selenium to deal with it
+ if no - deal with it like a normal Web Element
+
+  If it has a <Select>:
+   Locate the DD;
+Create an Obj of Select class and pass in the Web element;
+Use method from Select class ro select the desired option:.byVisibleText();.byIndex(); indexing in DD starts from 0!.byValue();
+
+
+  - **Approach for Both Single & Multi-Select Dropdowns:**
+    1. Inspect the dropdown.
+    2. Ensure it utilizes the `SELECT` tag.
+    3. Determine the locator for the WebElement dropdown.
+    4. Instantiate an object of the `Select` class (provide the WebElement as an argument).
+    5. Use methods from the `Select` class to choose an option:
+      - `selectByVisibleText()`
+      - `selectByValue()`
+      - `selectByIndex()`
+       **Additional Methods for Multi-Select:**
+          - `deselectByVisibleText()`
+          - `deselectByValue()`
+          - `deselectByIndex()`
+          - `deselectAll()`
+          - To check if a dropdown is multi-select, use `isMultiple()`: Returns `true` for multi-select dropdowns.
+
+Locate WebElement;
+Create an Obj of Select class and pass in the Web element;
+Use available methods to select the desired element:.byVisibleText();.byIndex(); indexing in DD starts from 0!.byValue();
+  Additional methods for MultiSelectDD:.DeselectByIndex();.DeselectByVisibleText();.DeselectByValue();
+
+        IsMultiple() --> returns true if the DD is multiSelect
+
+ALERTS/POP UPS:
+
+WebBased - are easy to handle, we do that exact same way as we do with regular web elements;
+Window based - we can't handle them using Selenium;
+Java Script based alerts - dealt with using Alerts class in Selenium.
+We can:
+   accept();
+   dismiss();
+   sendText();
+   getText();
+
+         Handling alerts:
+
+switchToAlert()- will switch the focus to alert;
+alert.accept();
+alert.dismiss();
+ `sendKeys()`: Input text (for prompt alerts).

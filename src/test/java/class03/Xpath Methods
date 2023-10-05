@@ -1,0 +1,32 @@
+Relative Xpath syntax:
+//link[@attribute='value]
+example:
+//link[@rel='stylesheet'
+Hey get me the tag name "Link" which has an attribute "rel" whose value is "Stylesheet"
+
+Syntax for Xpath with text:
+//tag(link)[text()='textname']
+example:
+//a[text()='Create an account']
+Re inspect if theres a lot of bodys with the same tag then copy and paste the text in xpath to make sure you get the right text.
+
+Contains method:
+//tagname[contains(@name,'value')] attribute. example ://a[contains(@herf,'facebook_login')]
+//tagname[contains(text(),'value)] text. example: //a[contains(text(),'account')]
+
+StartsWith:
+//tagname[starts-with(@attribute,'value')] example: //input[starts-with(@id,'api')]
+//tagname[starts-with(text(),'value')]
+
+Xpath with Index: Should be last resort since something could be added above hence it will
+change the element's index. Put parentheses in front of // and before index.
+Any of the xpaths then put [indexNumber]
+example:
+"(//input[@class='form-control backup'])[1]"));
+when you make the xpath put(//tagname[method][1])
+
+Concatenating attributes example:
+"//input[@data-detail='one' and @name='customField']"));
+"//input[@name='customField' and @data-detail='two']"));
+Syntax of using two attributes:
+//tagname[@attribute='value' and @attribute='value']"));

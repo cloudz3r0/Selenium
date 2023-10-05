@@ -1,0 +1,13 @@
+driver.getWindowHandle();
+returns window handle of the current page that is under focus.
+driver.getWindowHandles();
+returns all window handles that are open but in random order
+To switch window handles:
+Set<String>allHandles=driver.getWindowHandles();
+for(String handle:allHandles){
+String title=driver.getTitle();
+if(title.equals("Value/WindowHandle'){
+
+break;
+}
+}

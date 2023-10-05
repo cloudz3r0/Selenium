@@ -1,0 +1,30 @@
+get() vs navigate() Web driver command
+get you cant go back or forward in history
+Waits for whole page to load.
+navigate you can go back and forward and also refresh
+doesnt wait for the whole page to load.
+
+Close () —> will close current tab
+quit()—> will quit the whole browser
+navigate.refresh()
+ navigate.back()
+ navigate.forward()
+
+ 1.clear()--> clear the text box
+ 2.getText()--> to copy the text(if there is no text it will return nothing)
+ 3.get attribute(attribute); get attribute value
+ 4.value.click(); click whatever you navigated to
+ press ctrl+F at the button to search for tag
+
+Web element commands:
+ isSelected();--> Whethere element is selected or not.
+ isEnabled();-->If the element is active or not.
+ isDisplayed()--> if the element is visible on screen or not.
+ isDisabled()-->if the element is unactive
+ All return boolean values.
+driver.getTitle() get title of page
+
+
+
+ Finding elements by different locators (e.g., By.id(), By.name(), By.xpath(), By.cssSelector()).
+ Interacting with elements using methods like click(), sendKeys(), clear(), etc.

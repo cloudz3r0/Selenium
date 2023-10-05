@@ -1,0 +1,11 @@
+id className name
+driver.findElement(By.id("box"));
+driver.findElement(By.className("box"));
+driver.findElement(By.name("box"));
+
+linktext partial linktext
+Conditions:
+Element must be in the a tag(Anchor tag)
+Must be text present in that element
+driver.findElement(By.linkText("createNewAccount"));
+driver.findElement(By.partialLinkText("createNew"));

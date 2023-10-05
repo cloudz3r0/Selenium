@@ -1,0 +1,57 @@
+Testing software. Manual testing and automation testing.
+How to integrate selenium to project
+1.Create a maven project.
+
+get() vs navigate()
+get you cant go back or forward in history
+Waits for whole page to load.
+
+navigate you can go back and forward and also refresh
+doesnt wait for the whole page to load.
+
+close() vs quit()
+Close () —> will close current tab
+quit()—> will quit the whole browser
+fullscreen() vs maximize()
+-- maximize() will maximize the browser and you will still be able to see url, tabs, bookmarks
+    and fullscreen() will maximize the whole web application
+ What is a WebElement?
+    anything we see on the web page is considered to be a webelement
+    e.g. buttons, textboxes, checkboxes, links
+
+    HTML?
+    HyperText Markup Language
+
+    What is DOM?
+    DOM stands for Document Object Model. It is the browser's
+    internal view of the webpage.
+    Also called as Developer's tools, or Dev tools
+    Document --> can be stored any document as pdf, excel
+    Object --> any line in HTML is considered as Object
+    Model --> it is just a layout of the HTML
+
+     Locator
+        is an address or a position of an webelement on the web page
+        is used to locate or identify webelements on the webpage
+
+        8 Locators:
+        - ID
+        - Name
+        - Tagname
+        - xpath
+        - linktext
+        - partialLinkText
+        - CSS Selector
+        - ClassName
+
+Why do we need many locators?
+        -- some locators might have duplicate values in other nodes
+        -- Developers may not provide all the locators for all the elements
+
+   <button>click me</button>
+        a text is always located betweeen >< of the tag (i.e opening and closing of the tag
+        the above tag has text
+
+        <a href="g"></a>
+        the above tag has no text
+

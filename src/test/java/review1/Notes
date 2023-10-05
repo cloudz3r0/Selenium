@@ -1,0 +1,6 @@
+initiate instance of webdriver
+driver.get("url");  or  driver.navigate.to('Url");
+navigate is like searching another thing on the same tab.
+Can go backwards or forwards in the tab unlike the get command
+Driver.get just opens up the tab to whatever url is mentioned.
+get waits for the whole page to load.

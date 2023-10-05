@@ -1,0 +1,31 @@
+Locators are used to locate and interact with web elements:
+-Name
+-Id
+-Class
+-Linktext
+-Partiallinktext
+-Tag name
+-Path
+-Css
+Avoid locators that have digits and spaces.
+If in case you use a locator with a duplicate value, selenium will find the first one
+and interact with it. For example id= first_name;
+It will look for an id and first name.
+
+ Linktext:
+ The element must be in an "a" tag, a tag is also called anchor tag and it usually
+ contains links.
+ The element must have text in it. If one of the conditions is not fulfilled you cant
+ use the linktext locator.
+ Partial Linktext:
+ You can use partial text to locate linkTexts.
+1.the element must be in "a" tag , a tag is also called anchor tag and it usually contains links
+2.the element must have some text
+if one of the condition is not fullfiled u cant use the linktext locator
+
+ Webelement commands:
+ 1.clear()--> clear the text box
+ 2.getText()--> to copy the text(if there is no text it will return nothing)
+ 3.get attribute(attribute); get attribute value
+ 4.value.click(); click whatever you navigated to
+ press ctrl+F at the button to search for tag
