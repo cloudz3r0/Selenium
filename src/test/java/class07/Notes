@@ -1,0 +1,16 @@
+Implicit wait syntax:
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+Implicit wait is going to wait until web element is found NOT LOADED, JUST FOUND in DOM.
+  If it's not found it will
+  return you an exception. If found - will immediately move to the next piece of code.
+ It's a global wait:
+
+ones declared in start it's automatically implemented to all the elements that are needed
+     to be found;
+
+
+EXPLICIT WAIT:
+     Explicit wait waits for a certain condition to be fulfilled (e.g. is enabled) regarding the element,
+     the condition is specified by user.
+
+     Indexes on tables are different. Usually it wont be by index and goes by just order placement.
