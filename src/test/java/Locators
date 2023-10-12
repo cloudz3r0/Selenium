@@ -9,3 +9,71 @@ Element must be in the a tag(Anchor tag)
 Must be text present in that element
 driver.findElement(By.linkText("createNewAccount"));
 driver.findElement(By.partialLinkText("createNew"));
+
+Relative Xpath syntax:
+//link[@attribute='value]
+example:
+//link[@rel='stylesheet'
+Hey get me the tag name "Link" which has an attribute "rel" whose value is "Stylesheet"
+
+Syntax for Xpath with text:
+//tag(link)[text()='textname']
+example:
+//a[text()='Create an account']
+Re inspect if theres a lot of bodys with the same tag then copy and paste the text in xpath to make sure you get the right text.
+
+Contains method:
+//tagname[contains(@name,'value')] attribute. example ://a[contains(@herf,'facebook_login')]
+//tagname[contains(text(),'value)] text. example: //a[contains(text(),'account')]
+
+StartsWith:
+//tagname[starts-with(@attribute,'value')] example: //input[starts-with(@id,'api')]
+//tagname[starts-with(text(),'value')]
+
+Xpath with Index: Should be last resort since something could be added above hence it will
+change the element's index. Put parentheses in front of // and before index.
+Any of the xpaths then put [indexNumber]
+example:
+"(//input[@class='form-control backup'])[1]"));
+when you make the xpath put(//tagname[method][1])
+
+Concatenating attributes example:
+"//input[@data-detail='one' and @name='customField']"));
+"//input[@name='customField' and @data-detail='two']"));
+Syntax of using two attributes:
+//tagname[@attribute='value' and @attribute='value']"));
+
+Css doesnt allow you to access element using text.
+Attribute
+//tagname[@attribute='value]
+
+Shortcut for id
+tagname#value
+# stands for id
+
+shorcut for class
+tagname.value
+. stands for class
+if there is a space in the value of class then remove the space and use a dot.
+input.form-control.feedbackBox2. The value of class was form-control feedbackBox2. we removed the space
+and put a dot instead.
+
+Contains method shortcut css:
+tagname[attribute*='value']
+* means contains
+exaple: input[name*='contentInput']
+
+Starts with css:
+tagname[attribute^='value']
+^ is starts with
+
+Ends with
+tagname[attribute$='value']
+$ means endswith.
+
+webElement commands:
+isSelected();--> Whethere element is selected or not.
+isEnabled();-->If the element is active or not.
+isDisplayed()--> if the element is visible on screen or not.
+isDisabled();-->If the element is disabled.
+all return boolean values.

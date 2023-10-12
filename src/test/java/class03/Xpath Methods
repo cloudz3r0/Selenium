@@ -30,3 +30,8 @@ Concatenating attributes example:
 "//input[@name='customField' and @data-detail='two']"));
 Syntax of using two attributes:
 //tagname[@attribute='value' and @attribute='value']"));
+
+Find child of parent
+use xpath for parent then after ] use /childname
+example: "//ul[@class='dropdown-menu']/li" if theres tags in the child then use another slash
+//ul[@class='dropdown-menu']/li/a

@@ -28,3 +28,6 @@ driver.getTitle() get title of page
 
  Finding elements by different locators (e.g., By.id(), By.name(), By.xpath(), By.cssSelector()).
  Interacting with elements using methods like click(), sendKeys(), clear(), etc.
+
+ Use available methods to select the desired element:.byVisibleText();.byIndex(); indexing in DD starts from 0!.byValue();
+   Additional methods for MultiSelectDD:.DeselectByIndex();.DeselectByVisibleText();.DeselectByValue();

@@ -34,9 +34,9 @@ public class WindowHandles {
         for(String handle:allHandles){
             //switch to first handle in the list
             driver.switchTo().window(handle);
-            //get the title of the window on which the focus is. So privacy
+            //get the title of the window on which the focus is. We want to get privacy
             String title=driver.getTitle();
-            //check if the title
+            //check if the title is the one you want
             //to know what the title is so we can set the condition you inspect then type //title
             if(title.equalsIgnoreCase("Privacy Policy - Privacy &terms - Google")){
                 break;

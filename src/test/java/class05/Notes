@@ -9,7 +9,7 @@ does it have a select tag?   <Select>
 Create an Obj of Select class and pass in the Web element;
 Use method from Select class ro select the desired option:.byVisibleText();.byIndex(); indexing in DD starts from 0!.byValue();
 
-
+getOptions() returns all the options available in the dropdown.
   - **Approach for Both Single & Multi-Select Dropdowns:**
     1. Inspect the dropdown.
     2. Ensure it utilizes the `SELECT` tag.
@@ -50,3 +50,17 @@ switchToAlert()- will switch the focus to alert;
 alert.accept();
 alert.dismiss();
  `sendKeys()`: Input text (for prompt alerts).
+
+ - **JavaScript Alerts:**
+   - **Varieties:**
+     1. **Simple Alert:** Click 'OK'.
+     2. **Confirmation Alert:** Choose 'Cancel' or 'OK'.
+     3. **Prompt Alert:** Provide input, then click 'OK'.
+call alerts class
+or just do the function after the =
+Alerts alert=driver.switchTo().alert()."function".
+these are some functions
+accept();
+   dismiss();
+   sendText();
+   getText();
