@@ -1,0 +1,21 @@
+waits in selenium:
+to overcome synchronization issues
+Sleep can take longer even after the element is able to be used.
+Thread.sleep is good but we dont know the exact time until the element is present or found.
+So we use waits to get the exact times.
+
+
+Implicit wait: implicit wait is wait till element is found.
+If the element is not found in the duration of time out
+it will return us with exception.
+syntax of implicit wait:
+driver.manage(0.timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+Explicit Wait:
+Has to be declared for every individual element if needed.
+Explicit wait is going to wait until the WebElement fulfills the condition.
+As soon as condition is fulfilled it moves on to the next line of code.
+If the condition isnt fulfilled(in the duration of timeout) it will give an exception.
+WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+wait.until(ExpectedConditions."The condition for which you want to wait for"(The webelement)
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Enabled']"));

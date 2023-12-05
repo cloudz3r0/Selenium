@@ -1,0 +1,52 @@
+Keys:
+1.Locate the webelement
+2.WebElement input=driver.findElement(By.xpath("//input[@class='form-control']"));
+        input.sendKeys(Keys.ENTER);
+
+        use case:
+        If a user story says that user hits enter key, u can use keys to mimic the enter key operation
+        or u can also us Keys.delete to delete if clear command isnt working.
+
+        ActionClass:
+        1.Declare the instance of actions class
+        2. Usee object to call the functions
+        action.contextClick(Webelement).perform()
+        action.moveToElement(WebElement).perform()
+        action.click(Webelement).perform()
+        Chain different methods
+        actgion.clickAndHold().moveToElement().build().perform();
+        drag and drop,right click(Context click),scroll,hover
+The build() method in Selenium is used to create a composite action
+that contains all the actions gathered which are ready to be performed.
+The perform() method is used to execute the chain of actions which are built using the
+Action build method.
+
+Js Executor
+1. declare the instance
+2.js.executeScript(script,element)
+from where will you get the script?google
+what is the most common jsExecutescript functionality used?-->click().
+
+because sometimes the regular click operation doesnt work and at that point js click wont work.
+
+use case
+scroll,click,highlight the element boundary.
+
+Take screenshot:
+1.Declare the instance  TakesScreenshot ts = (TakesScreenshot) driver;
+2.take screenshot    File ss = ts.getScreenshotAs(OutputType.FILE);
+3.to save screenshot FileUtils.copyFile(screenshot,newFile(path));
+file format- simple file, pic you save
+   byte format - pic in representation of numbers
+commons io dependency to save screenshot
+ <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+FileUtils.copyFile(screenshot,newFile(path));
+            |
+            |
+            V
+            system.getProperty(user.dir)+"\\screenshot\\"+filename+extension

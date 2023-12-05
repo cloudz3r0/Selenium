@@ -77,3 +77,22 @@ isEnabled();-->If the element is active or not.
 isDisplayed()--> if the element is visible on screen or not.
 isDisabled();-->If the element is disabled.
 all return boolean values.
+
+
+
+
+
+
+
+Advance Xpath:
+Get to the nearest approachable element.
+//tagname[@attribute='value']/following-sibling::tagname[indexIfNeeded]or[Attribute]
+example://input[@id='favourite-book']/following-sibling::input[1]
+
+
+//tagname[@attribute='value']/preceding-sibling::tagname[IndexIfNeeded] index will be reverse
+example:
+//input[@id='least-favorite']/preceding-sibling::input[1]
+
+//tagname[@attribute='value']/child::input[IndexIfNeeded]
+example: //div[@id='familyTree']/child::input[1]

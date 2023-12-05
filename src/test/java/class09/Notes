@@ -1,0 +1,44 @@
+Action class allows us to do operations such as:
+
+Hover over
+Drag and drop
+right click
+double click
+simple click
+etc
+
+use built when calling multiple methods in Actions class
+
+The build() method in Selenium is used to create a composite action
+that contains all the actions gathered which are ready to be performed.
+The perform() method is used to execute the chain of actions which are built using the
+Action build method.
+
+
+JSExecutor:
+jsExecutor is used to execute java script code.
+
+In javascript you:
+-declare instance of Js executor ---
+JavascriptException js=(JavascriptException) driver;
+-.executeScript(code to execute);
+
+
+if u want to scroll:
+1) JavascriptException js=(JavascriptException) driver;
+2) js.executeScript("window.scrollBy(0,-500)");
+
+SCREEN SHOT:
+1) Declare the instance of take sc
+                    TakesScreenshot ts=(TakesScreenshot) driver;
+2) Take the screen shot
+                    ts.getScreenshotAs(OutputType.file)
+
+   file format- simple file, pic you save
+   byte format - pic in representation of numbers
+
+   Save Screenshot
+   FileUtils.copyFile(filename,path where you want to save it in)
+   if its a new file then add new File(path));
+   example:
+    FileUtils.copyFile(ss,new File("C:\\Users\\Ren7e\\Desktop\\SeliniumSyntax\\screenshot\\abc.png"))

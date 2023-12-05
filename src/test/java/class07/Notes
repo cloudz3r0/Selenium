@@ -1,16 +1,70 @@
 Implicit wait syntax:
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-Implicit wait is going to wait until web element is found NOT LOADED, JUST FOUND in DOM.
-  If it's not found it will
-  return you an exception. If found - will immediately move to the next piece of code.
- It's a global wait:
+ it tells the webdriver to wait for a certain amount of time before throwing an exception
+ it will only be written once and will be applied to the whole session of the execution
+ We can say that implicit wait is a global wait
 
-ones declared in start it's automatically implemented to all the elements that are needed
-     to be found;
+ Implicit wait is usually set to 20 seconds. If your element is found in any time between the remaining
+ time, that time will be ignored and your script will move on to the next line or action
+
+ If the element is not found in a given time, ONLY then you will get an exception
+
+Syntax:
+driver.manage().timeouts().implicitlyWait(Duration.of.Seconds(20));
+********************Waits*********************
+wait for webElement to be found --> Implicit wait
+implicit wait --> global
+scenario:
+webElement : <button id= "type"> button </button>
+appears in the DOM after 10 seconds
 
 
 EXPLICIT WAIT:
      Explicit wait waits for a certain condition to be fulfilled (e.g. is enabled) regarding the element,
      the condition is specified by user.
 
+     rough syntax:
+     wait.until.webElement to be displayed ()
+ real syntax for Explicit wait:
+
+     1. define the wait:   WebDriverWait wait = new WebDriverWait(driver, Duration.of.Seconds(20) );
+     2. Conditon      :    wait.until(ExpectedConditions.elmenttobeVisible(By.xpath("")));
+
+WebTables:
+Webtables are elements on the webpage, which are constructed by having
+rows and columns
+
+Types of webtables:
+1. Static webtables
+2. dynamic webtables
+
+WebTables consist of defferent sections or parts:
+<table>
+        <thead>
+                <tr>
+                    <th></th> --> column data or heading
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td></td> --> table data
+                </tr>
+        </tbody>
+</table>
      Indexes on tables are different. Usually it wont be by index and goes by just order placement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
